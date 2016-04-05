@@ -71,6 +71,10 @@ Notes from the Flatiron School iOS Development Track (0216)
 - Objects and Classes in Swift
 - Blocks in Swift
 
+### Week 9 - 12
+- Project Mode
+- Custom Delegates
+
 ## Minimum Viable Product
 - Also known as "Minimum Desirable Product"
 - Should grow from a simple solution to a simple problem into something more complex
@@ -354,6 +358,22 @@ var ageInYears:UInt {
 ### Internet in Swift
 - Alamofire and SwiftyJSON are the way to go
 
+### Custom Delegates
+- Useful in instances where some code might want to _ask_ or _inform_ another class
+- The *protocol* formalizes these points and the *delegate* is how they are accessed
+-- A *protocol* is a group of methods with a given name
+-- The name of a method within a protocol should start with the object delegating
+- EX:
+```objc
+@protocol ColorViewControllerDelegate <NSObject>
+@required
+-(void)colorViewController:(ColorViewController *)colorViewController didSelectColor:(UIColor *) color;
+@end
+@interface
+@property // This is where the delegate property goes
+@end
+```
+
 ## Misc.
 - It's easier to teach a teacher to code than it is to teach a coder to teach.
 - Learn by doing.
@@ -362,3 +382,4 @@ var ageInYears:UInt {
 - CTRL + Drag a folder or file into terminal to change to that working directory
 - To parse the license of some piece of software, use tldrLegal.com
 - UIGestureRecognizerState... has several options for sender.state on a gesture's IBAction outlet
+- Forward Declarations with `@class` above the `@interface` are used to inform a file that a class exists without importing that class's header
