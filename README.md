@@ -374,6 +374,12 @@ var ageInYears:UInt {
 @end
 ```
 
+### Swift/Objective-C Interoperability
+- Swfit can subclass Objective-C, but not vice-versa
+- Swift classes must be subclasses of NSObject or declared with @objc
+- Anything with optionals in Swift can't be read by and don't show up in Objective-C
+-- Use nullable types are a workaround (e.g., use an unwrapped NSNumber? instead of an NSInt?)
+
 ## Misc.
 - It's easier to teach a teacher to code than it is to teach a coder to teach.
 - Learn by doing.
