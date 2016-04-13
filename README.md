@@ -399,3 +399,4 @@ var ageInYears:UInt {
 -- Charge more if you have to do design work yourself ($3-4K)
 -- Super simple "business card" apps should be ~$4-5K (mass produced apps!)
 -- Any good app should take 2-3 months, done right
+--
