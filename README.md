@@ -390,13 +390,12 @@ var ageInYears:UInt {
 - UIGestureRecognizerState... has several options for sender.state on a gesture's IBAction outlet
 - Forward Declarations with `@class` above the `@interface` are used to inform a file that a class exists without importing that class's header
 - Freelancing requires incredible work ethic and time management
--- Never accept a freelance job till you've broken it down into the smallest possible parts (with padding)
--- Don't undersell your work or services
--- Always have a contract that fully scopes the app
--- Help the client pare down the idea till its the base feature and you know and agree on exactly what they want
--- Anytime the client asks for server-side functionality, assume the price and time should be five times higher
--- Referrals and Meetups are the best places to get freelance gigs (online freelance marketplaces take too big a cut)
--- Charge more if you have to do design work yourself ($3-4K)
--- Super simple "business card" apps should be ~$4-5K (mass produced apps!)
--- Any good app should take 2-3 months, done right
---
+  - Never accept a freelance job till you've broken it down into the smallest possible parts (with padding)
+  - Don't undersell your work or services
+  - Always have a contract that fully scopes the app
+  - Help the client pare down the idea till its the base feature and you know and agree on exactly what they want
+  - Anytime the client asks for server-side functionality, assume the price and time should be five times higher
+  - Referrals and Meetups are the best places to get freelance gigs (online freelance marketplaces take too big a cut)
+  - Charge more if you have to do design work yourself ($3-4K)
+  - Super simple "business card" apps should be ~$4-5K (mass produced apps!)
+  - Any good app should take 2-3 months, done right
