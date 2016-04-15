@@ -74,6 +74,11 @@ Notes from the Flatiron School iOS Development Track (0216)
 ### Week 9 - 12
 - Project Mode
 - Custom Delegates
+- UI Basics
+- GitHub
+- Testing in Xcode
+- NSError
+- Technical Interviews
 
 ## Minimum Viable Product
 - Also known as "Minimum Desirable Product"
