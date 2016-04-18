@@ -79,6 +79,7 @@ Notes from the Flatiron School iOS Development Track (0216)
 - Testing in Xcode
 - NSError
 - Technical Interviews
+- Memory Management
 
 ## Minimum Viable Product
 - Also known as "Minimum Desirable Product"
@@ -366,8 +367,8 @@ var ageInYears:UInt {
 ### Custom Delegates
 - Useful in instances where some code might want to _ask_ or _inform_ another class
 - The *protocol* formalizes these points and the *delegate* is how they are accessed
--- A *protocol* is a group of methods with a given name
--- The name of a method within a protocol should start with the object delegating
+  - A *protocol* is a group of methods with a given name
+  - The name of a method within a protocol should start with the object delegating
 - EX:
 ```objc
 @protocol ColorViewControllerDelegate <NSObject>
@@ -384,6 +385,30 @@ var ageInYears:UInt {
 - Swift classes must be subclasses of NSObject or declared with @objc
 - Anything with optionals in Swift can't be read by and don't show up in Objective-C
 -- Use nullable types are a workaround (e.g., use an unwrapped NSNumber? instead of an NSInt?)
+
+### Memory Management
+- Ownership has to do with how things are stored in RAM
+  - `strong` (default for objects)
+  - `weak`
+  - `assign` (default for primitives) 
+  - `copy`
+  - `unsafe_unretained`
+- Atomicity has to do with thready saftey, but isn't very relevant anymore.
+  - `nonatomic` is generally what you want.
+  - `atomic` (default) theoretically makes things safer on older processors.
+- Writeability has to do with whether you can write to a property.
+  - `readwrite` (default) generates a setter.
+  - `readonly` no setter generated for the property.
+- Nullability specifies whether it is legal to assign nil to a property.
+  - Mostly useful for helping Xcode generate Swfit interfaces for Objective-C code.
+  - Only applicable for object types/pointers.
+  - `nullable` property comes into Swfit as an optional. (E.g., `String?`)
+  - `nonnull` propert comes into Swift as a non-optional. (E.g., `String`)
+  - `null_unspecified` (default) property comes into Swift as an implicitly unwrapped optional. (E.g., `String!`)
+  - `null_resettable` specifies that the property can be assigned `nil`, and resets the property to some default value. Comes into Swift as an optional.
+- Getter and Setter Naming allows you to rename the generated getter and setter methods
+  - `getter = <someNewGetter>`
+  - `setter = <someNewSetter>`
 
 ## Misc.
 - It's easier to teach a teacher to code than it is to teach a coder to teach.
