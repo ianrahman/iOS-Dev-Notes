@@ -384,15 +384,23 @@ var ageInYears:UInt {
 - Swfit can subclass Objective-C, but not vice-versa
 - Swift classes must be subclasses of NSObject or declared with @objc
 - Anything with optionals in Swift can't be read by and don't show up in Objective-C
--- Use nullable types are a workaround (e.g., use an unwrapped NSNumber? instead of an NSInt?)
+  - Use nullable types are a workaround (e.g., use an unwrapped NSNumber? instead of an NSInt?)
 
 ### Memory Management
 - Ownership has to do with how things are stored in RAM
-  - `strong` (default for objects)
-  - `weak`
-  - `assign` (default for primitives) 
-  - `copy`
-  - `unsafe_unretained`
+  - `strong` (default for objects) references hold an object until the object is removed or the property is assigned to something else.
+    - `strong` objects that reference one another will never let go and therefore never be released, creating the potential for memory leaks.
+    - Notification Center observers may also be indadvertantly kept enabled if a view controller is retained.
+    - *Protip:* _If it's a delegate, make it weak._
+    - *Protip:* _If "parent" knows about "child" and "child" knows about "parent", make one of the relationships weak._
+    - All local variables, the values of arrays and dictionaries, and references to non-primatives made within a block make strong references by default.
+  - `weak` reference's value will revert to `nil` if the object it references (a.k.a. referent) is removed.
+  - `assign` (default for primitives) has no strong/weak implications.
+  - `copy` makes a strong reference to a copy of the referent. This allows the original referent to be changed without altering the copied value.
+    - *Protip:* _If the class of the property has a mutable counterpart (e.g., NSString & NSMutableString), use copy.
+  - `unsafe_unretained` acts as `weak`, but does not become `nil` if the referenced object goes away. Just points to deallocated objects (garbage memory). Likely to cause crashes.
+  - When there is no strong reference to an object, it will be released from memory.
+  - 
 - Atomicity has to do with thready saftey, but isn't very relevant anymore.
   - `nonatomic` is generally what you want.
   - `atomic` (default) theoretically makes things safer on older processors.
