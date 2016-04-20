@@ -71,7 +71,7 @@ Notes from the Flatiron School iOS Development Track (0216)
 - Objects and Classes in Swift
 - Blocks in Swift
 
-### Week 9 - 12
+### Weeks 9 - 12
 - Project Mode
 - Custom Delegates
 - UI Basics
@@ -80,6 +80,7 @@ Notes from the Flatiron School iOS Development Track (0216)
 - NSError
 - Technical Interviews
 - Memory Management
+- CSBS
 
 ## Minimum Viable Product
 - Also known as "Minimum Desirable Product"
@@ -417,6 +418,16 @@ var ageInYears:UInt {
 - Getter and Setter Naming allows you to rename the generated getter and setter methods
   - `getter = <someNewGetter>`
   - `setter = <someNewSetter>`
+
+## CSBS
+- The essential CS content which is actually useful in the real world
+- Lines of code are not as important as performance, which is measured in Big O notation
+  - Big O notation addresses the worst case scenario of an algorithm
+  - Determining Big O of an algorithm...
+- Arrays vs. Linked Lists
+  - Linked Lists are ordered sets that are not in a contiguous portion of memory
+  - Each element in a linked list points to the next element, wherever it is
+  - Linked lists have better performance for insertions and deletions, but arrays have better performance for access by index
 
 ## Misc.
 - It's easier to teach a teacher to code than it is to teach a coder to teach.
