@@ -428,6 +428,9 @@ var ageInYears:UInt {
   - Linked Lists are ordered sets that are not in a contiguous portion of memory
   - Each element in a linked list points to the next element, wherever it is
   - Linked lists have better performance for insertions and deletions, but arrays have better performance for access by index
+- Sorting Algorithms
+  - Many algorithms exist, each with its own pros and cons
+  - http://www.sorting-algorithms.com
 
 ## Misc.
 - It's easier to teach a teacher to code than it is to teach a coder to teach.
