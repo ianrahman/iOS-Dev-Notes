@@ -179,6 +179,7 @@ lookup lifecycle methods
 - multiple Prototype Cells can be created
 - if the number of sections or rows change in your table view, call `[tableView reloadData];`
   - probably in viewWillAppear
+- when populating a table view with data from a property of its own class, be sure to add the protocols for `<UITableViewDelegate, UITableViewDataSource>` and set the delegates for both to `self`
 
 ## Auto Layout
 - CSS for apps
