@@ -89,7 +89,6 @@ Notes from the Flatiron School iOS Development Track (0216)
 - Break things down into the smallest possible pieces
 - Reduce everything into previously solved problems
 
-
 ## Common Errors
 - "unrecognized selector sent to instance"
   - a method was called that doesn't exist
@@ -180,6 +179,7 @@ lookup lifecycle methods
 - if the number of sections or rows change in your table view, call `[tableView reloadData];`
   - probably in viewWillAppear
 - when populating a table view with data from a property of its own class, be sure to add the protocols for `<UITableViewDelegate, UITableViewDataSource>` and set the delegates for both to `self`
+- When using a xib or other view to customize the appearance of a table view cell, make sure the prototype cell's style is set to `Custom`
 
 ## Auto Layout
 - CSS for apps
