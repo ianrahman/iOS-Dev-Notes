@@ -194,6 +194,7 @@ lookup lifecycle methods
 
 ## Constraints in Interface Builder
 - control + drag items in the storyboard to other objects or the view itself to open constraint options
+- If things seem super broken, check outlets on your storyboards and make sure there aren't any erroneous ones
 
 ## Data Stores & Singleton
 - a data store is a standard class that is used to hold data
